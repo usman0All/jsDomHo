@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        span{
+            color:red;
+        }
+        h3{
+        background-color: black;
+        color:white;
+     }
+     pre{
+        background-color: greenyellow;
+        font-size: large;
+        font-weight: bold;
+     }
+     button{
+        color:red;
+        font-weight: bold;
+        background-color: aqua;
+        border-radius: 15px;
+     }
+    </style>
+</head>
+<body>
+    <h3><span>Q1.</span>Write the code to access element which is having id as "text"</h3>
+    <div id="text">rajasthan</div>
+    <pre>
+        let text=document.getElementById('text');
+        console.log(text);
+    </pre>
+    <h3><span>Q2.</span>Write the code to access element which is having tag as "h1"</h3>
+    <h1>Allahabad</h1>
+    <pre>
+        let h1=document.getElementsByTagName("h1");
+        console.log(h1);
+    </pre>
+    <h3><span>Q3.</span>Write the code to access element which is having class as "box"</h3>
+    <div class="box">Amerika</div>
+    <pre>
+        let byClass=document.getElementsByClassName('box');
+        console.log(byClass);
+    </pre>
+
+    <h3><span>Q4.</span>Changethe heading hello to hello world using Dom function</h3>
+    <h4 id="Heading">Hello!!</h4>
+    <button onclick="change()">SEE-CHANGE</button>
+    <pre>
+        var ch=document.getElementById('Heading');
+        function change(){
+        ch.innerHTML="Hello World!!"
+        } 
+    </pre>
+
+
+    <h3><span>Q5.</span>Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"  </h3>
+    <h4 id="rtext">Hello World!!</h4>
+    <button onclick="replace()">REPLACE-TEXT</button>
+   
+    <pre>
+        function replace(){
+            let rt=document.getElementById('rtext');
+            rt.innerHTML="Welcome to elevation academy"; 
+         }
+    </pre>
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
